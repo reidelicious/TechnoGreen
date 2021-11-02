@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Techno Green</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Techno Green">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- FontAwesome JS-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.datatables.net/v/bs5/dt-1.11.3/b-2.0.1/sl-1.3.3/datatables.min.css" />
+	<!-- FontAwesome JS-->
+
+
+	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+		integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+		crossorigin="anonymous"></script>
+
+	<!-- App CSS -->
+
+	<link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
+
+</head>
+
+<body class="app">
+	<header class="app-header fixed-top">
+		<div class="app-header-inner">
+			<div class="container-fluid py-2">
+				<div class="app-header-content">
+					<div class="row justify-content-between align-items-center">
+
+						<div class="col-auto">
+							<a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+									role="img">
+									<title>Menu</title>
+									<path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+										stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path>
+								</svg>
+							</a>
+						</div>
+						<!--//col-->
+						<div class="search-mobile-trigger d-sm-none col">
+							<i class="search-mobile-trigger-icon fas fa-search"></i>
+						</div>
+						<!--//col-->
+						<div class="app-search-box col">
+							<form class="app-search-form">
+								<input type="text" placeholder="Search..." name="search"
+									class="form-control search-input">
+								<button type="submit" class="btn search-btn btn-primary" value="Search"><i
+										class="fas fa-search"></i></button>
+							</form>
+						</div>
+						<!--//app-search-box-->
+
+						<div class="app-utilities col-auto">
+							<div class="app-utility-item app-notifications-dropdown dropdown">
+								<a class="dropdown-toggle no-toggle-arrow" id="notifications-dropdown-toggle"
+									data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
+									title="Notifications">
+									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
+										<path fill-rule="evenodd"
+											d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+									</svg>
+									<span class="icon-badge">3</span>
+								</a>
+								<!--//dropdown-toggle-->
+
+								<div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
+									<div class="dropdown-menu-header p-3">
+										<h5 class="dropdown-menu-title mb-0">Notifications</h5>
+									</div>
+									<!--//dropdown-menu-title-->
+									<div class="dropdown-menu-content">
+										<div class="item p-3">
+											<div class="row gx-2 justify-content-between align-items-center">
+												<div class="col-auto">
+													<img class="profile-image"
+														src="assets/images/profiles/profile-1.png" alt="">
+												</div>
+												<!--//col-->
+												<div class="col">
+													<div class="info">
+														<div class="desc">Amy shared a file with you. Lorem ipsum dolor
+															sit amet, consectetur adipiscing elit. </div>
+
+													</div>
+												</div>
+												<!--//col-->
+											</div>
+											<!--//row-->
+											<a class="link-mask" href="notifications.html"></a>
+										</div>
+										<!--//item-->
+										<div class="item p-3">
+											<div class="row gx-2 justify-content-between align-items-center">
+												<div class="col-auto">
+													<div class="app-icon-holder">
+														<svg width="1em" height="1em" viewBox="0 0 16 16"
+															class="bi bi-receipt" fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd"
+																d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z" />
+															<path fill-rule="evenodd"
+																d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
+														</svg>
+													</div>
+												</div>
+												<!--//col-->
+												<div class="col">
+													<div class="info">
+														<div class="desc">You have a new invoice. Proin venenatis
+															interdum est.</div>
+														<div class="meta"> 1 day ago</div>
+													</div>
+												</div>
+												<!--//col-->
+											</div>
+											<!--//row-->
+											<a class="link-mask" href="notifications.html"></a>
+										</div>
+										<!--//item-->
+										<div class="item p-3">
+											<div class="row gx-2 justify-content-between align-items-center">
+												<div class="col-auto">
+													<div class="app-icon-holder icon-holder-mono">
+														<svg width="1em" height="1em" viewBox="0 0 16 16"
+															class="bi bi-bar-chart-line" fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd"
+																d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
+														</svg>
+													</div>
+												</div>
+												<!--//col-->
+												<div class="col">
+													<div class="info">
+														<div class="desc">Your report is ready. Proin venenatis interdum
+															est.</div>
+														<div class="meta"> 3 days ago</div>
+													</div>
+												</div>
+												<!--//col-->
+											</div>
+											<!--//row-->
+											<a class="link-mask" href="notifications.html"></a>
+										</div>
+										<!--//item-->
+										<div class="item p-3">
+											<div class="row gx-2 justify-content-between align-items-center">
+												<div class="col-auto">
+													<img class="profile-image"
+														src="assets/images/profiles/profile-2.png" alt="">
+												</div>
+												<!--//col-->
+												<div class="col">
+													<div class="info">
+														<div class="desc">James sent you a new message.</div>
+														<div class="meta"> 7 days ago</div>
+													</div>
+												</div>
+												<!--//col-->
+											</div>
+											<!--//row-->
+											<a class="link-mask" href="notifications.html"></a>
+										</div>
+										<!--//item-->
+									</div>
+									<!--//dropdown-menu-content-->
+
+									<div class="dropdown-menu-footer p-2 text-center">
+										<a href="notifications.html">View all</a>
+									</div>
+
+								</div>
+								<!--//dropdown-menu-->
+							</div>
+							<!--//app-utility-item-->
+							<div class="app-utility-item">
+								<a href="settings.html" title="Settings">
+									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear icon"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
+										<path fill-rule="evenodd"
+											d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z" />
+									</svg>
+								</a>
+							</div>
+							<!--//app-utility-item-->
+
+							<div class="app-utility-item app-user-dropdown dropdown">
+								<a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#"
+									role="button" aria-expanded="false"><img src="assets/images/user.png"
+										alt="user profile"></a>
+								<ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+									<li><a class="dropdown-item" href="account.html">Account</a></li>
+									<li><a class="dropdown-item" href="settings.html">Settings</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="login.html">Log Out</a></li>
+								</ul>
+							</div>
+							<!--//app-user-dropdown-->
+						</div>
+						<!--//app-utilities-->
+					</div>
+					<!--//row-->
+				</div>
+				<!--//app-header-content-->
+			</div>
+			<!--//container-fluid-->
+		</div>
+		<!--//app-header-inner-->
+		<div id="app-sidepanel" class="app-sidepanel">
+			<div id="sidepanel-drop" class="sidepanel-drop"></div>
+			<div class="sidepanel-inner d-flex flex-column">
+				<a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+				<div class="app-branding">
+					<a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg"
+							alt="logo"><span class="logo-text">Techno Green</span></a>
+
+				</div>
+				<!--//app-branding-->
+
+				<nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="index.html">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+										<path fill-rule="evenodd"
+											d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Overview</span>
+							</a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+
+						<li class="nav-item has-submenu ">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse"
+								data-bs-target="#submenu-2" aria-expanded="true" aria-controls="submenu-2">
+								<span class="nav-icon">
+									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-columns-gap"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M6 1H1v3h5V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12h-5v3h5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8H1v7h5V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6h-5v7h5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Categories</span>
+								<span class="submenu-arrow">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+									</svg>
+								</span>
+								<!--//submenu-arrow-->
+							</a>
+							<!--//nav-link-->
+							<div id="submenu-2" class="collapse submenu submenu-2 show"
+								data-bs-parent="#menu-accordion">
+								<ul class="submenu-list list-unstyled">
+									<li class="submenu-item "><a class="submenu-link active" href="#"><i
+												class="fas fa-leaf"></i> Indoor Plants</a></li>
+									<li class="submenu-item"><a class="submenu-link " href="#"><i
+												class="fas fa-seedling"></i> Outdoor Plants</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="#"><i
+												class="fas fa-tools"></i> Tools</a></li>
+								</ul>
+							</div>
+						</li>
+						<!--//nav-item-->
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link " href="docs.html">
+								<span class="nav-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-cart" viewBox="0 0 16 16">
+										<path
+											d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Cart</span>
+							</a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="orders.html">
+								<span class="nav-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-heart" viewBox="0 0 16 16">
+										<path
+											d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Wish List</span>
+							</a>
+							<!--//nav-link-->
+						</li>
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="orders.html">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path fill-rule="evenodd"
+											d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+										<circle cx="3.5" cy="5.5" r=".5" />
+										<circle cx="3.5" cy="8" r=".5" />
+										<circle cx="3.5" cy="10.5" r=".5" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Order History</span>
+							</a>
+							<!--//nav-link-->
+						</li>
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="orders.html">
+								<span class="nav-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-messenger" viewBox="0 0 16 16">
+										<path
+											d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Messages </span>
+							</a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="charts.html">
+								<span class="nav-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-map" viewBox="0 0 16 16">
+										<path fill-rule="evenodd"
+											d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Maps</span>
+							</a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+					</ul>
+					<!--//app-menu-->
+				</nav>
+				<!--//app-nav-->
+				<div class="app-sidepanel-footer">
+					<nav class="app-nav app-nav-footer">
+						<ul class="app-menu footer-menu list-unstyled">
+
+							<li class="nav-item">
+								<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+								<a class="nav-link"
+									href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/">
+									<span class="nav-icon">
+										<i class="fas fa-sign-out-alt"></i>
+									</span>
+									<span class="nav-link-text">Logout</span>
+								</a>
+								<!--//nav-link-->
+							</li>
+							<!--//nav-item-->
+						</ul>
+						<!--//footer-menu-->
+					</nav>
+				</div>
+				<!--//app-sidepanel-footer-->
+
+			</div>
+			<!--//sidepanel-inner-->
+		</div>
+		<!--//app-sidepanel-->
+	</header>
+	<!--//app-header-->
+
+	<div class="app-wrapper">
+
+		<div class="app-content pt-3 p-md-3 p-lg-4">
+			<div class="container-fluid">
+
+				<h1 class="app-page-title">Indoor Plants </h1>
+
+				<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white p-3">
+
+					<table id="example" class="table table-hover" style="width:100%">
+						<thead>
+							<tr>
+								<th>Thumbnail</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th></th>
+								<th></th>
+								<th></th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img class="img-thumbnail" src="assets/images/plant.jpg" /></td>
+								<td>sample plant</td>
+								<td>999</td>
+								<td><button class="btn btn-secondary text-white"><i class="fas fa-heart"></i></button>
+								</td>
+								<td><button class="btn btn-secondary text-white"><i
+											class="fas fa-cart-plus"></i></button></td>
+								<td><button class="btn-sm app-btn-secondary" data-bs-toggle="modal"
+										data-bs-target="#viewDetailsModal">View</button></td>
+
+							</tr>
+							<tr>
+								<td><img class="img-thumbnail" src="assets/images/plant.jpg" /></td>
+								<td>sample plant</td>
+								<td>999</td>
+								<td><button class="btn btn-secondary text-white"><i class="fas fa-heart"></i></button>
+								</td>
+								<td><button class="btn btn-secondary text-white"><i
+											class="fas fa-cart-plus"></i></button></td>
+								<td><button class="btn-sm app-btn-secondary" data-bs-toggle="modal"
+										data-bs-target="#viewDetailsModal">View</button></td>
+
+							</tr>
+							<tr>
+								<td><img class="img-thumbnail" src="assets/images/plant.jpg" /></td>
+								<td>sample plant</td>
+								<td>999</td>
+								<td><button class="btn btn-secondary text-white"><i class="fas fa-heart"></i></button>
+								</td>
+								<td><button class="btn btn-secondary text-white"><i
+											class="fas fa-cart-plus"></i></button></td>
+								<td><button class="btn-sm app-btn-secondary" data-bs-toggle="modal"
+										data-bs-target="#viewDetailsModal">View</button></td>
+
+							</tr>
+
+					</table>
+				</div>
+
+			</div>
+			<!--//container-fluid-->
+		</div>
+		<!--//app-content-->
+
+		<footer class="app-footer">
+
+		</footer>
+		<!--//app-footer-->
+
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="viewDetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">View Details </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+
+						<div class="app-card-body px-4 w-100">
+							<div class="item border-bottom py-3">
+								<div class="row d-flex justify-content-center">
+									<img src="assets/images/plant.jpg" id="modalImage" class="rounded-circle" alt="...">
+								</div>
+								<!--//row-->
+							</div>
+							<!--//item-->
+							<div class="item border-bottom py-3">
+								<div class="d-flex bd-highlight mb-1">
+									<div class="me-auto p-2 bd-highlight"><strong>Name of plant, indoor plant</strong> </div>
+									
+								</div>
+
+							</div>
+							<!--//item-->
+							<div class="item border-bottom py-1">
+								<div class="d-flex bd-highlight mb-3">
+									<div class="me-auto p-2 bd-highlight"><strong>P200</strong> </div>
+									<div class="p-2 bd-highlight"><button class="btn btn-secondary text-white"><i
+												class="fas fa-heart"></i></button></div>
+
+									<div class="p-2 bd-highlight"><button class="btn btn-secondary text-white"><i
+												class="fas fa-cart-plus"></i></button> </div>
+								</div>
+							</div>
+							<div class="item border-bottom py-3">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+									<label for="floatingTextarea">Comments</label>
+								  </div>
+							</div>
+							<!--//item-->
+						</div>
+						<!--//app-card-body-->
+						<div class="app-card-footer p-4 mt-auto">
+
+						</div>
+						<!--//app-card-footer-->
+
+					</div>
+					<!--//app-card-->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary text-white">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Javascript -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+	<script type="text/javascript"
+		src="https://cdn.datatables.net/v/bs5/dt-1.11.3/b-2.0.1/sl-1.3.3/datatables.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="assets/js/app.js"></script>
+	<script>
+
+		$(document).ready(function () {
+			$('#example').DataTable({
+				dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+					"<'row'<'col-sm-12'tr>>" +
+					"<'row'<'col-sm-12 col-md-5'B><'col-sm-12 col-md-7'p>>",
+
+
+			});
+
+
+			$('#AddItemBtn').attr('data-bs-toggle', 'modal');
+			$('#AddItemBtn').attr('data-bs-target', '#AddItemModal');
+		});
+
+
+
+	</script>
+
+	<style>
+		#modalImage {
+			height: 200px;
+			width: 200px;
+		}
+
+		tr td img {
+			height: 70px !important;
+		}
+
+		.bi {
+			font-size: 1.5rem;
+		}
+	</style>
+</body>
+
+</html>
